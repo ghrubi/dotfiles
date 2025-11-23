@@ -6,7 +6,7 @@
 source ~/.local/share/omarchy/default/bash/rc
 
 # Add your own exports, aliases, and functions here.
-export STOW_DIR=~/projects/dev-machines/dotfiles/omarchy/
+export STOW_DIR=~/dotfiles
 
 set -o vi
 
