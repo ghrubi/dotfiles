@@ -7,6 +7,7 @@ source ~/.local/share/omarchy/default/bash/rc
 
 # Add your own exports, aliases, and functions here.
 export STOW_DIR=~/dotfiles
+export PATH=$HOME/bin:$PATH
 
 set -o vi
 
@@ -17,4 +18,5 @@ alias stow='stow -t ~'
 alias ll='ls -al'
 alias ms='mega-sync'
 alias mt='mega-transfers --show-syncs'
+alias y='run-yazi.sh'
 
