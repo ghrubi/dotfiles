@@ -1,0 +1,50 @@
+# Make an alias for invoking commands you use constantly
+# alias p='python'
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias ll='ls -al'
+alias more='less -F -X'
+alias vi='nvim'
+alias src="source ~/.zshrc"
+alias s="src"
+alias stow='stow -t ~'
+alias ms='mega-sync'
+alias mt='mega-transfers --show-syncs'
+alias wh="which"
+alias y='run-yazi.sh'
+
+# chrome w/out HTTPS cert warning
+alias chromeno='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-insecure-localhost --ignore-certificate-errors'
+
+# create, run, stop python virtual env
+# not used anymore. pipenv instead
+#alias cvenv="python -m venv venv"
+#alias venv="source ./venv/bin/activate"
+#alias dvenv="deactivate"
+
+# pipenv everything
+alias pe='pipenv'
+alias pei='pipenv install'
+alias peid='pipenv install --dev'
+# pipenv install Pipfile.lock, instead of Pipfile
+alias peil='pipenv install --ignore-pipfile'
+alias peu='pipenv uninstall'
+alias pes='pipenv shell'
+alias per='pipenv run'
+alias perp='pipenv run python'
+alias peg='pipenv graph'
+alias perm='pipenv --rm'
+alias pec='pipenv check'
+alias pel='pipenv lock'
+alias pele='pipenv lock --pre'
+alias pev='pipenv --venv'
+alias pee='pipenv --envs'
+alias pew='pipenv --where'
+
+# kube aliases
+
+# docker
+alias dockernuke='docker rmi $(docker images -a -q); docker system prune'
+alias kcd='kubectl config use-context docker-desktop'
+alias nsr='nats stream report'
+alias wnsr='watch nats stream report'
+
