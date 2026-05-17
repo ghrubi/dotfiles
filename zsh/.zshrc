@@ -37,6 +37,12 @@ zinit snippet OMZP::gcloud
 # Load completions
 autoload -Uz compinit && compinit
 
+# Kubernetes completions
+if command -v kubectl >/dev/null 2>&1; then
+  source <(kubectl completion zsh)
+  compdef __start_kubectl k
+fi
+
 zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -65,11 +71,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -lh --group-directories-first -
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -lh --group-directories-first --icons=auto $realpath'
 
 
-
-# Shell integrations
-# evals
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
 
 # source more zsh functionality
 #source ~/zsh-adds/poetry.zsh
@@ -146,3 +147,9 @@ bindkey '^k' history-search-forward
 bindkey '^j' history-search-backward
 
 source ~/.aliases-bash-zsh
+
+# Shell integrations
+# evals
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+
