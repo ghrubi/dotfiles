@@ -14,4 +14,4 @@ source "$HOME/.config/zsh/integrations.zsh"
 [[ ! -f ~/.aliases-bash-zsh ]] || source ~/.aliases-bash-zsh
 
 # starship
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
