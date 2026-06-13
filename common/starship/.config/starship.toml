@@ -1,0 +1,118 @@
+add_newline = true
+command_timeout = 1000
+
+format = """
+$directory$git_branch$git_status$kubernetes
+$character"""
+
+right_format = "$cmd_duration$python$username$hostname"
+
+# palette = "omarchy"
+# palette = "onedark"
+# palette = "blend"
+palette = "custom"
+
+[directory]
+# style = "blue italic"
+style = "path italic"
+truncate_to_repo = false
+truncation_length = 3
+format = "[$path]($style) "
+
+[git_branch]
+# style = "bright-black"
+# style = "green"
+style = "branch"
+symbol = ""
+format = "[$symbol $branch]($style)"
+
+[git_status]
+# style = "orange"
+style = "status"
+# format = "[([ $all_status](fg:yellow))([ $ahead_behind](fg:red))]($style) "
+format = "[( $all_status)( $ahead_behind)]($style) "
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+conflicted = ""
+up_to_date = "[](fg:green)"
+deleted = "✘${count}"
+renamed = "»"
+modified = "!${count}"
+staged = "+${count}"
+untracked = "?${count}"
+stashed = ""
+
+[kubernetes]
+disabled = false
+# style = "purple"
+style = "context"
+symbol = "⎈ "
+format = "[$symbol$context(:$namespace)]($style) "
+detect_files = ["Dockerfile","skaffold.yaml","Makefile"]
+
+[cmd_duration]
+min_time = 5000
+style = "yellow"
+format = "[$duration]($style) "
+
+[python]
+style = "bright-black"
+format = '[${virtualenv}]($style) '
+detect_extensions = []
+detect_files = []
+detect_folders = []
+
+[username]
+style_user = "bright-black"
+style_root = "white"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = true
+style = "bright-black"
+format = "[@$hostname]($style) "
+
+[character]
+# success_symbol = "[❯](cyan)"
+success_symbol = "[❯](prompt)"
+# error_symbol = "[❯](red)"
+error_symbol = "[❯](error)"
+vimcmd_symbol = "[❮](magenta)"
+vimcmd_replace_one_symbol = "[❮](magenta)"
+vimcmd_replace_symbol = "[❮](magenta)"
+vimcmd_visual_symbol = "[❮](magenta)"
+
+[palettes.omarchy]
+blue = "#7aa2f7" # dir path
+green = "#9ece6a" # git branch
+orange = "#e0af68" # git status
+red = "#f7768e" # error
+purple = "#bb9af7" # context
+cyan = "#7dcfff" #success
+gray = "#565f89"
+
+
+[palettes.onedark]
+blue = "#61afef" # dir path
+green = "#98c379" # git branch
+orange = "#e5c07b" # git status
+red = "#e06c75" # error
+purple = "#c678dd" # context
+cyan = "#56b6c2" #success
+gray = "#7f848e"
+
+[palettes.blend]
+blue = "#61afef" # onedark # dir path
+green = "#98c379" # onedark # git branch
+orange = "#e5c07b" # onedark # git status
+purple = "#bb9af7" # tokyo night #context
+cyan = "#56b6c2" # onedark #success
+
+[palettes.custom]
+path = "#7dcfff" # dir path
+branch = "#9ece6a" # git branch
+status = "#e0af68" # git status
+context = "#bb9af7" # context
+error = "#f7768e" # error
+prompt = "#73daca" #success

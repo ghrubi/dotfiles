@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# Elevate Portal Project Port Forwards
+
+WORK_DIR="$HOME/work-local"
+
+case "$1" in
+    up)
+        make -C "$WORK_DIR" pf
+        ;;
+    down)
+        make -C "$WORK_DIR" stop
+        ;;
+    status)
+        make -C "$WORK_DIR" status
+        ;;
+    logs)
+        make -C "$WORK_DIR" logs
+        ;;
+    keycloak)
+        make -C "$WORK_DIR" pf-keycloak
+        ;;
+    portal)
+        make -C "$WORK_DIR" pf-portal
+        ;;
+    data)
+        make -C "$WORK_DIR" pf-data
+        ;;
+    db)
+        make -C "$WORK_DIR" pf-database
+        ;;
+    es)
+        make -C "$WORK_DIR" pf-elasticsearch
+        ;;
+    *)
+        echo "Usage:"
+        echo "  epf up"
+        echo "  epf down"
+        echo "  epf status"
+        echo "  epf logs"
+        echo "  epf keycloak"
+        echo "  epf portal"
+        echo "  epf data"
+        echo "  epf db"
+        echo "  epf es"
+        ;;
+esac
