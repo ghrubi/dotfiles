@@ -1,0 +1,6 @@
+{  
+    "editor.minimap.enabled": false,
+    "terminal.integrated.mouseWheelScrollSensitivity": 3,
+    "terminal.integrated.fontSize": 10,
+    "editor.fontSize": 10
+}
