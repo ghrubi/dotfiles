@@ -1,0 +1,44 @@
+# ~/.config/omarchy/themes/void-neon/colors.toml
+
+mode = "dark"
+
+# Core
+accent = "#00e5ff"
+# selection = "#003840"
+# muted = "#202020"
+selection = "#002b30"
+muted = "#181818"
+
+# Surfaces
+background = "#000000"
+dark_background = "#000000"
+darker_background = "#000000"
+# lighter_background = "#101010"
+lighter_background = "#0a0a0a"
+
+# Text
+foreground = "#e8e8e8"
+# dark_foreground = "#707070"
+dark_foreground = "#606060"
+light_foreground = "#b8b8b8"
+bright_foreground = "#ffffff"
+
+# Hyprland
+hyprland_active_border = "rgba(00e5ffff)"
+
+# ANSI / semantic colors
+red = "#ff4057"
+yellow = "#ffd740"
+orange = "#ff8c40"
+green = "#00e676"
+cyan = "#00e5ff"
+blue = "#448aff"
+magenta = "#e040fb"
+brown = "#b08050"
+
+bright_red = "#ff6b7d"
+bright_yellow = "#ffe066"
+bright_green = "#69f0ae"
+bright_cyan = "#64f4ff"
+bright_blue = "#82b1ff"
+bright_magenta = "#ea80fc"
