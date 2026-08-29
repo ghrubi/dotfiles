@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Toggle the MacBook Pro Touch Bar microphone input.
+
+source_name="alsa_input.pci-0000_04_00.3.BuiltinMic"
+
+pactl set-source-mute "$source_name" toggle
+if pactl get-source-mute "$source_name" | grep -q yes; then
+    notify-send "Mic Muted" -i microphone-off
+else
+    notify-send "Mic Unmuted" -i microphone
+fi
